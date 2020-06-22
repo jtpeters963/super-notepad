@@ -15,6 +15,8 @@ class Task(db.Model):
 @app.route('/')
 def index():
     return render_template('index.html')
+
+    
 @app.route('/tasks')
 def tasks():
     tasks=db.session.query(Task)
